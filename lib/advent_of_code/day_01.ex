@@ -20,6 +20,6 @@ defmodule AdventOfCode.Day01 do
   end
 
   def parse_input(input) do
-    input |> String.trim() |> String.split("\n") |> Enum.map(&String.to_integer/1)
+    input |> String.split("\n", trim: true) |> Enum.map(&String.to_integer/1)
   end
 end

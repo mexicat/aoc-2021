@@ -1,19 +1,11 @@
 defmodule AdventOfCode.Day02 do
   def part1(input) do
-    {hor, dep} =
-      input
-      |> parse_input()
-      |> Enum.reduce({0, 0}, &move/2)
-
+    {hor, dep} = input |> parse_input() |> Enum.reduce({0, 0}, &move/2)
     hor * dep
   end
 
   def part2(input) do
-    {hor, dep, _aim} =
-      input
-      |> parse_input()
-      |> Enum.reduce({0, 0, 0}, &move_2/2)
-
+    {hor, dep, _aim} = input |> parse_input() |> Enum.reduce({0, 0, 0}, &move_2/2)
     hor * dep
   end
 

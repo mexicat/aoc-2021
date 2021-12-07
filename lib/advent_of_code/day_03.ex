@@ -40,7 +40,7 @@ defmodule AdventOfCode.Day03 do
         |> Enum.at(0)
         |> elem(0)
 
-      new_acc = Enum.filter(acc, fn n -> Enum.at(n, i) == best end)
+      new_acc = Enum.filter(acc, &(Enum.at(&1, i) == best))
 
       case length(new_acc) do
         1 -> {:halt, Enum.at(new_acc, 0)}
